@@ -3,46 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>J Eletro Motores | Engenharia, Rebobinagem e Manutenção Industrial</title>
-  <meta name="description" content="Manutenção corretiva, preventiva e rebobinagem de motores elétricos industriais de baixa e alta tensão. Plantão emergencial 24h e testes de bancada.">
-  
-  <!-- Tipografia Industrial: Montserrat -->
+  <title>J Eletro Motores | Rebobinagem e Manutenção Industrial - Palmas PR</title>
+  <meta name="description" content="Rebobinagem de motores elétricos, motobombas e manutenção industrial em Palmas - PR. Atendimento técnico ágil pelos telefones (46) 9 9115-6068 e (46) 3262-3964.">
+
+  <!-- Fontes Google: Montserrat e Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  
-  <!-- CSS Principal -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER NAVEGAÇÃO -->
+  <!-- TOP BAR INSTITUCIONAL -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <span class="top-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Tv. Alceu, 81 - Palmas, PR
+        </span>
+        <span class="top-item hide-mobile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Seg à Sex: 07:30 às 18:00 | Sáb: 08:00 às 12:00
+        </span>
+      </div>
+      <div class="top-phones">
+        <a href="tel:4632623964" class="phone-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (46) 3262-3964
+        </a>
+        <a href="https://wa.me/5546991156068" target="_blank" rel="noopener noreferrer" class="phone-link wpp-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.17 8.17 0 0 1-5.82 2.41c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31c-.81-1.3-1.24-2.8-1.24-4.43 0-4.54 3.7-8.24 8.24-8.24m4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+          (46) 9 9115-6068
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CABEÇALHO PRINCIPAL -->
   <header id="main-header" class="header">
     <div class="container header-container">
-      <a href="#hero" class="logo" aria-label="J Eletro Motores Home">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-        </svg>
-        <span class="logo-text">J ELETRO <span class="accent-text">MOTORES</span></span>
+      <!-- LOGO FIEL À FACHADA -->
+      <a href="#hero" class="brand-logo" aria-label="J Eletro Motores">
+        <div class="logo-mark">
+          <svg viewBox="0 0 100 100" class="j-icon">
+            <!-- J estilizado angular idêntico ao da fachada -->
+            <polygon points="15,10 65,10 65,55 45,78 20,78 38,58 38,28 15,28" fill="#E52424" />
+            <polygon points="65,10 88,10 88,48 65,75 52,62 70,42 70,28 65,28" fill="#D32F2F" />
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-eletro">ELETRO</span>
+          <span class="logo-sub">Motores</span>
+        </div>
       </a>
 
-      <!-- Menu Desktop & Mobile -->
-      <nav class="nav-menu" id="nav-menu" aria-label="Navegação Principal">
+      <!-- MENU NAVEGAÇÃO -->
+      <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">A Empresa</a></li>
           <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#sobre" class="nav-link">Diferenciais</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
+          <li><a href="#diferenciais" class="nav-link">Estrutura</a></li>
+          <li><a href="#contato" class="nav-link">Orçamento</a></li>
         </ul>
-        <a href="#contato" class="btn btn-outline btn-mobile-only">Solicitar Orçamento</a>
+        <div class="mobile-cta-box">
+          <a href="https://wa.me/5546991156068" class="btn btn-red w-100">Falar no WhatsApp</a>
+        </div>
       </nav>
 
-      <!-- Ações Header -->
-      <div class="header-actions">
-        <a href="#contato" class="btn btn-outline nav-cta">Orçamento Rápido</a>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
+      <!-- BOTÃO CTA HEADER -->
+      <div class="header-right">
+        <a href="#contato" class="btn btn-red header-cta-btn">Orçamento Rápido</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir Menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -53,290 +87,340 @@
 
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="status-pill">
-        <span class="status-indicator"></span>
-        <span>Plantão Técnico de Urgência 24h &bull; Indústrias</span>
+    <div class="hero-backdrop"></div>
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Oficina Técnica Especializada &bull; Palmas - PR
       </div>
-
       <h1 class="hero-title">
-        Precisão Absoluta em <br>
-        <span class="accent-text">Rebobinagem & Manutenção</span> de Motores.
+        Rebobinagem de Motores Elétricos & <span class="highlight-blue">Manutenção Industrial</span>
       </h1>
-
-      <p class="hero-subtitle">
-        Elimine o tempo de máquina parada. Engenharia diagnóstica rigorosa, materiais classe H e laudo técnico para sua planta fabril.
+      <p class="hero-desc">
+        Soluções completas em motores monofásicos, trifásicos, bombas d'água e transformadores. Agilidade e garantia para não parar a sua produção fabril e agroindustrial.
       </p>
 
-      <div class="hero-cta-group">
-        <a href="https://wa.me/5500999999999?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20urgente%20para%20motor%20el%C3%A9trico." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.17 8.17 0 0 1-5.82 2.41c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31c-.81-1.3-1.24-2.8-1.24-4.43 0-4.54 3.7-8.24 8.24-8.24m4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
-          </svg>
-          Atendimento Imediato (WhatsApp)
+      <div class="hero-buttons">
+        <a href="https://wa.me/5546991156068?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20motor%20el%C3%A9trico." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.17 8.17 0 0 1-5.82 2.41c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31c-.81-1.3-1.24-2.8-1.24-4.43 0-4.54 3.7-8.24 8.24-8.24m4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+          Solicitar pelo WhatsApp
         </a>
-        <a href="#servicos" class="btn btn-secondary">Explorar Serviços</a>
+        <a href="#servicos" class="btn btn-outline-white">Conhecer Serviços</a>
+      </div>
+
+      <!-- FAIXA DE BENEFÍCIOS RÁPIDOS -->
+      <div class="hero-strip">
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Fios de Cobre Classe H</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Testes em Bancada Própria</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <span>Garantia de Desempenho</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO DE SERVIÇOS -->
+  <!-- SEÇÃO A EMPRESA (INSPIRADA NA ELETRO AR / FACHADA) -->
+  <section id="sobre" class="section about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="sub-heading">Estrutura & Tradição</span>
+        <h2 class="section-heading">Oficina Própria e Especializada em Palmas - PR</h2>
+        <p class="paragraph">
+          Localizada na <strong>Tv. Alceu, 81</strong>, a <strong>J Eletro Motores</strong> conta com ampla oficina estruturada com talhas de içamento para motores pesados, estufa de secagem e equipamentos de medição técnica.
+        </p>
+        <p class="paragraph">
+          Atendemos empresas do ramo madeireiro, frigoríficos, cooperativas, indústrias alimentícias, construtoras e produtores rurais de Palmas e de todo o Sudoeste Paranaense.
+        </p>
+        
+        <div class="phone-callout">
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="callout-text">
+            <span>Fale com nossa equipe técnica:</span>
+            <h3>(46) 3262-3964 / (46) 9 9115-6068</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card-info">
+        <div class="facade-badge-box">
+          <span class="facade-title">REBOBINAGEM & MANUTENÇÃO INDUSTRIAL</span>
+          <p>Oficina preparada para motores elétricos de pequeno, médio e grande porte, com garantia total de serviço.</p>
+          <ul class="check-list">
+            <li>Troca de rolamentos e embuchamento de tampas</li>
+            <li>Rebobinamento conforme especificações de fábrica</li>
+            <li>Verniz isolante com cura em estufa controlada</li>
+            <li>Manutenção preventiva em motores de linha de produção</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE SERVIÇOS (ESTILO ELETRO AR) -->
   <section id="servicos" class="section services-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Capacidade Técnica</span>
-        <h2 class="section-title">Soluções Especializadas em Alta & Baixa Tensão</h2>
-        <p class="section-desc">Procedimentos conforme normas NBR e IEC com ensaios computadorizados.</p>
+      <div class="section-title-center">
+        <span class="sub-heading">Linha de Atendimento</span>
+        <h2 class="section-heading">Nossos Serviços Especializados</h2>
+        <p class="section-sub">Atendimento técnico e manutenção com rigor e confiabilidade.</p>
       </div>
 
       <div class="services-grid">
-        <!-- Card 1 -->
-        <article class="service-card">
-          <div class="card-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-              <circle cx="12" cy="12" r="2"></circle>
-              <path d="M6 12h.01M18 12h.01"></path>
-            </svg>
+        <!-- Serviço 1 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
           </div>
-          <h3 class="card-title">Rebobinagem Especializada</h3>
-          <p class="card-text">
-            Rebobinamento em fios de cobre esmaltado com isolamento Classe H, vernizes de alto rendimento e impregnação a vácuo.
-          </p>
-          <span class="card-meta">Baixa e Alta Tensão até 13.8kV</span>
-        </article>
+          <h3>Rebobinagem de Motores Elétricos</h3>
+          <p>Rebobinamento completo para motores monofásicos e trifásicos de todas as marcas e potências, usando cobre eletrolítico e vernizes de alta isolação térmica.</p>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="service-card">
-          <div class="card-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
+        <!-- Serviço 2 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
           </div>
-          <h3 class="card-title">Manutenção & Diagnóstico</h3>
-          <p class="card-text">
-            Análise de vibração, medição de descarga parcial, ensaios de isolamento (Megômetro/Hipot) e termografia infravermelha.
-          </p>
-          <span class="card-meta">Preditiva e Preventiva</span>
-        </article>
+          <h3>Bombas D'Água & Submersas</h3>
+          <p>Revisão mecânica, vedação com selo mecânico, rebobinamento e teste de pressão em motobombas centrífugas, submersas e de poço artesiano.</p>
+        </div>
 
-        <!-- Card 3 -->
-        <article class="service-card">
-          <div class="card-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
+        <!-- Serviço 3 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
           </div>
-          <h3 class="card-title">Automação & Painéis</h3>
-          <p class="card-text">
-            Montagem e parametrização de CCMs, inversores de frequência e soft-starters para partidas suaves e proteção total.
-          </p>
-          <span class="card-meta">Comissionamento Fabril</span>
-        </article>
+          <h3>Manutenção Industrial Mecânica</h3>
+          <p>Recuperação de eixos desgastados, ajuste e embuchamento de tampas, troca de rolamentos de alta precisão e alinhamento mecânico.</p>
+        </div>
 
-        <!-- Card 4 -->
-        <article class="service-card">
-          <div class="card-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="22" y1="12" x2="18" y2="12"></line>
-              <line x1="6" y1="12" x2="2" y2="12"></line>
-              <line x1="12" y1="6" x2="12" y2="2"></line>
-              <line x1="12" y1="22" x2="12" y2="18"></line>
-            </svg>
+        <!-- Serviço 4 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
           </div>
-          <h3 class="card-title">Alinhamento a Laser & Balanceamento</h3>
-          <p class="card-text">
-            Correção micrométrica de desalinhamento de eixos e balanceamento dinâmico em bancada técnica e em campo (in loco).
-          </p>
-          <span class="card-meta">Precisão ISO 1940</span>
-        </article>
+          <h3>Geradores & Transformadores</h3>
+          <p>Diagnóstico de bobinagem, substituição de isoladores, revisão elétrica geral e teste de carga para grupos geradores de emergência e rurais.</p>
+        </div>
+
+        <!-- Serviço 5 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="9" y2="9"></line><line x1="15" y1="9" x2="15" y2="9"></line><line x1="9" y1="15" x2="9" y2="15"></line><line x1="15" y1="15" x2="15" y2="15"></line></svg>
+          </div>
+          <h3>Painéis e Chaves de Partida</h3>
+          <p>Montagem e manutenção de quadros elétricos de comando, chaves compensadoras, soft-starters e inversores para acionamento seguro.</p>
+        </div>
+
+        <!-- Serviço 6 -->
+        <div class="service-box">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3>Plantão de Urgência Fabril</h3>
+          <p>Atendimento emergencial para indústrias e agroindústrias com motor parado. Diagnóstico rápido para minimizar prejuízos de produção.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO POR QUE A J ELETRO -->
-  <section id="sobre" class="section why-section">
+  <!-- DIFERENCIAIS DA ESTRUTURA -->
+  <section id="diferenciais" class="section diff-section">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Garantia & Rigor</span>
-        <h2 class="section-title">Por Que A J Eletro Motores</h2>
-        <p class="section-desc">Compromisso com o tempo de produção da sua indústria.</p>
-      </div>
+      <div class="diff-wrapper">
+        <div class="diff-content">
+          <span class="sub-heading">Confiabilidade & Eficiência</span>
+          <h2 class="section-heading text-white">Por Que Confiar Seus Motores à J Eletro?</h2>
+          
+          <div class="diff-list">
+            <div class="diff-item">
+              <span class="diff-number">01</span>
+              <div>
+                <h4>Testes em Carga e Isolação</h4>
+                <p>Nenhum motor sai da nossa oficina sem ensaio de corrente a vazio, resistência ôhmica e teste rigoroso de isolamento com Megômetro.</p>
+              </div>
+            </div>
 
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h4 class="feature-title">Atendimento 24h Crítico</h4>
-            <p class="feature-text">Equipe de prontidão imediata para reduzir o downtime em paradas industriais não programadas.</p>
+            <div class="diff-item">
+              <span class="diff-number">02</span>
+              <div>
+                <h4>Materiais com Padrão de Fábrica</h4>
+                <p>Empregamos fios esmaltados de cobre de primeira qualidade, vernizes e isolamentos Classe F e H com cura completa em estufa.</p>
+              </div>
+            </div>
+
+            <div class="diff-item">
+              <span class="diff-number">03</span>
+              <div>
+                <h4>Localização Estratégica em Palmas</h4>
+                <p>Fácil acesso na Tv. Alceu, com facilidade para carga e descarga de motores de grande porte direto no pátio do galpão.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h4 class="feature-title">Laboratório & Testes Próprios</h4>
-            <p class="feature-text">Bancada com dinamômetro, ensaios de surto (Surge Test) e laudos de isolação certificados.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h4 class="feature-title">Insumos de Primeira Linha</h4>
-            <p class="feature-text">Utilização exclusiva de rolamentos originais (SKF/NSK) e fios de cobre eletrolítico 99,9% puro.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h4 class="feature-title">Garantia Técnica Total</h4>
-            <p class="feature-text">Garantia documentada de serviço com assistência pós-entrega e relatório de desempenho térmico.</p>
+        <div class="diff-cta-card">
+          <h3>Precisa de Manutenção Urgente?</h3>
+          <p>Traga seu motor até nossa oficina em Palmas ou fale diretamente com nosso técnico de plantão.</p>
+          <div class="diff-phone-box">
+            <a href="tel:46991156068" class="diff-phone-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (46) 9 9115-6068
+            </a>
+            <a href="tel:4632623964" class="diff-phone-btn fixo-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (46) 3262-3964
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE CONTATO DIRETO -->
+  <!-- FORMULÁRIO DE ORÇAMENTO & LOCALIZAÇÃO -->
   <section id="contato" class="section contact-section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <span class="section-tag">Orçamento Expresso</span>
-          <h2 class="section-title">Envie os Parâmetros do Seu Motor</h2>
-          <p class="contact-text">
-            Nossa equipe de engenharia elétrica retorna com a estimativa técnica em até <strong>60 minutos</strong> em horário comercial.
-          </p>
+    <div class="container contact-grid">
+      <div class="form-side">
+        <span class="sub-heading">Atendimento Direto</span>
+        <h2 class="section-heading">Solicite um Orçamento</h2>
+        <p class="paragraph">Preencha com os dados do motor para adiantar seu atendimento. Retornamos imediatamente.</p>
 
-          <div class="contact-highlights">
-            <div class="highlight-item">
-              <span class="highlight-bullet"></span>
-              <span>Retirada e Entrega Dedicada no Parque Industrial</span>
+        <form id="quote-form" class="industrial-form" novalidate>
+          <div class="form-row">
+            <div class="form-control">
+              <label for="name">Nome / Empresa *</label>
+              <input type="text" id="name" name="name" placeholder="Ex: Serraria Paraná / Carlos" required>
+              <span class="error-text" id="name-error"></span>
             </div>
-            <div class="highlight-item">
-              <span class="highlight-bullet"></span>
-              <span>Emissão de ART (Anotação de Responsabilidade Técnica)</span>
+            <div class="form-control">
+              <label for="phone">Telefone / WhatsApp *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(46) 99999-9999" required>
+              <span class="error-text" id="phone-error"></span>
             </div>
           </div>
-        </div>
 
-        <div class="form-container">
-          <form id="quote-form" class="quote-form" novalidate>
-            <div class="form-group">
-              <label for="client-name">Nome / Empresa *</label>
-              <input type="text" id="client-name" name="name" placeholder="Ex: Lucas / Cerâmica Paulista" required>
-              <span class="error-msg" id="name-error"></span>
+          <div class="form-control">
+            <label for="service">Tipo de Serviço *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Selecione a necessidade</option>
+              <option value="Rebobinagem de Motor">Rebobinagem de Motor Elétrico</option>
+              <option value="Manutenção em Bomba D'água">Manutenção de Bomba D'água / Poço</option>
+              <option value="Troca de Rolamentos / Mecânica">Troca de Rolamentos e Ajuste Mecânico</option>
+              <option value="Manutenção Preventiva Industrial">Manutenção Preventiva / Industrial</option>
+              <option value="Emergência / Outros">Outro Serviço / Emergencial</option>
+            </select>
+            <span class="error-text" id="service-error"></span>
+          </div>
+
+          <div class="form-control">
+            <label for="details">Dados do Motor (CV, RPM, Marca ou Sintoma) *</label>
+            <textarea id="details" name="details" rows="3" placeholder="Ex: Motor WEG 15CV 1750 RPM travado e sem força." required></textarea>
+            <span class="error-text" id="details-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-red btn-submit" id="btn-submit">
+            <span>Enviar e Abrir no WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.17 8.17 0 0 1-5.82 2.41c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31c-.81-1.3-1.24-2.8-1.24-4.43 0-4.54 3.7-8.24 8.24-8.24m4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- MAPA & LOCALIZAÇÃO -->
+      <div class="location-side">
+        <div class="location-card">
+          <h3>Nossa Localização</h3>
+          <p class="address-text">
+            <strong>J Eletro Motores</strong><br>
+            Tv. Alceu, 81 - Palmas, PR<br>
+            CEP 85555-000 &bull; Sudoeste do Paraná
+          </p>
+
+          <div class="location-phones">
+            <p><strong>WhatsApp:</strong> (46) 9 9115-6068</p>
+            <p><strong>Fixo:</strong> (46) 3262-3964</p>
+          </div>
+
+          <div class="map-placeholder">
+            <div class="map-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="map-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p>Galpão com pátio amplo para caminhonetes e caminhões industriais.</p>
+              <a href="https://maps.google.com/?q=81+Tv.+A+Alceu,+Palmas,+Paran%C3%A1" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+                Abrir no Google Maps
+              </a>
             </div>
-
-            <div class="form-group">
-              <label for="client-phone">Telefone / WhatsApp *</label>
-              <input type="tel" id="client-phone" name="phone" placeholder="(00) 00000-0000" required>
-              <span class="error-msg" id="phone-error"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="service-type">Tipo de Serviço *</label>
-              <select id="service-type" name="service" required>
-                <option value="" disabled selected>Selecione a necessidade</option>
-                <option value="Rebobinagem Completa">Rebobinagem Completa</option>
-                <option value="Manutenção Preventiva / Revisão">Manutenção Preventiva / Revisão</option>
-                <option value="Alinhamento e Balanceamento">Alinhamento a Laser / Balanceamento</option>
-                <option value="Emergência / Queima Repentina">Urgência Técnica / Motor Parado</option>
-              </select>
-              <span class="error-msg" id="service-error"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="motor-specs">Dados do Motor (Potência, RPM, Fabricante) *</label>
-              <textarea id="motor-specs" name="specs" rows="3" placeholder="Ex: WEG 50CV, 1750 RPM, 380V - Cheiro forte de queimado." required></textarea>
-              <span class="error-msg" id="specs-error"></span>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block" id="btn-submit">
-              <span>Transmitir Solicitação Técnica</span>
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-
-            <!-- Feedback de Sucesso -->
-            <div id="form-feedback" class="form-feedback hidden" role="alert"></div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
+  <!-- RODAPÉ COMPLETO -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-col">
-        <a href="#hero" class="logo footer-logo">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-          <span class="logo-text">J ELETRO <span class="accent-text">MOTORES</span></span>
-        </a>
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 100 100" class="j-icon">
+              <polygon points="15,10 65,10 65,55 45,78 20,78 38,58 38,28 15,28" fill="#E52424" />
+              <polygon points="65,10 88,10 88,48 65,75 52,62 70,42 70,28 65,28" fill="#D32F2F" />
+            </svg>
+          </div>
+          <div class="logo-text-block">
+            <span class="logo-eletro text-white">ELETRO</span>
+            <span class="logo-sub text-white">Motores</span>
+          </div>
+        </div>
         <p class="footer-desc">
-          Excelência em recuperação de máquinas rotativas industriais. Confiabilidade mecânica e elétrica de ponta a ponta.
+          Rebobinagem técnica de motores elétricos, motobombas e manutenção mecânica industrial. Qualidade, garantia e compromisso com o cliente em Palmas - PR.
         </p>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-title">Atendimento Rápido</h4>
-        <ul class="footer-links">
-          <li><strong>Plantão:</strong> (11) 98765-4321</li>
-          <li><strong>Central:</strong> (11) 4004-9876</li>
-          <li><strong>E-mail:</strong> contato@jeletromotores.com.br</li>
+        <h4>Serviços</h4>
+        <ul class="footer-nav">
+          <li>Rebobinagem em Baixa e Alta Tensão</li>
+          <li>Manutenção de Bombas D'Água</li>
+          <li>Revisão de Geradores e Transformadores</li>
+          <li>Troca de Rolamentos e Alinhamento</li>
+          <li>Comandos Elétricos e CCM</li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-title">Endereço Operacional</h4>
-        <p class="footer-address">
-          Av. das Indústrias Pesadas, 1420 - Galpão 03<br>
-          Distrito Industrial - Setor Metalmecânico<br>
-          São Paulo - SP
-        </p>
+        <h4>Contatos Diretos</h4>
+        <ul class="footer-nav contact-list">
+          <li><strong>Celular/Whats:</strong> (46) 9 9115-6068</li>
+          <li><strong>Telefone Fixo:</strong> (46) 3262-3964</li>
+          <li><strong>Endereço:</strong> Tv. Alceu, 81 - Palmas, PR</li>
+          <li><strong>Região:</strong> Palmas e Sudoeste do Paraná</li>
+        </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="container bottom-content">
-        <p>&copy; <span id="current-year"></span> J Eletro Motores Ltda. Todos os direitos reservados.</p>
-        <p class="signature">Engenharia Elétrica & Manutenção Industrial</p>
+      <div class="container footer-bottom-flex">
+        <p>&copy; <span id="current-year"></span> J Eletro Motores - Palmas / PR. Todos os direitos reservados.</p>
+        <p class="credit">Rebobinagem de Motores Elétricos &bull; Manutenção Industrial</p>
       </div>
     </div>
   </footer>
 
-  <!-- Script JS -->
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5546991156068?text=Ol%C3%A1%2C%20estou%20no%20site%20da%20J%20Eletro%20Motores%20e%20gostaria%20de%20um%20or%C3%A7amento." class="floating-wpp" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.17 8.17 0 0 1-5.82 2.41c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31c-.81-1.3-1.24-2.8-1.24-4.43 0-4.54 3.7-8.24 8.24-8.24m4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+    </svg>
+    <span class="wpp-tooltip">Orçamento Rápido</span>
+  </a>
+
   <script src="script.js"></script>
 </body>
 </html>

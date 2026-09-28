@@ -1,20 +1,22 @@
 /**
- * J ELETRO MOTORES - Script Principal SPA
- * Integração Direta com os Telefones da Empresa: (46) 9 9115-6068 & (46) 3262-3964
+ * J ELETRO MOTORES - Script SPA Completo
+ * Fundada em 15/05/2012 | Palmas - PR
+ * Integração: WhatsApp (46) 9 9115-6068 & Fixo (46) 3262-3964
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
+  initStickyHeader();
   initMobileMenu();
+  initFaqAccordion();
   initFormQuote();
   initYear();
   initScrollSpy();
 });
 
 /**
- * 1. Efeito no Header ao Rolar
+ * 1. Efeito do Header ao Rolar
  */
-function initHeader() {
+function initStickyHeader() {
   const header = document.getElementById('main-header');
   const onScroll = () => {
     if (window.scrollY > 40) {
@@ -32,7 +34,7 @@ function initHeader() {
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link, .mobile-cta-box a');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-cta a');
 
   if (!menuToggle || !navMenu) return;
 
@@ -53,7 +55,39 @@ function initMobileMenu() {
 }
 
 /**
- * 3. Validação do Formulário e Envio Direto para o WhatsApp (46) 9 9115-6068
+ * 3. Acordeão Interativo de Dúvidas (FAQ)
+ */
+function initFaqAccordion() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Fecha todos os outros itens para manter o acordeão limpo
+      accordionItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherContent = otherItem.querySelector('.accordion-content');
+        if (otherContent) otherContent.style.maxHeight = null;
+        const otherHeader = otherItem.querySelector('.accordion-header');
+        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+      });
+
+      // Se não estava aberto, abre o clicado
+      if (!isOpen) {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+/**
+ * 4. Validação e Envio do Formulário para o WhatsApp (46) 9 9115-6068
  */
 function initFormQuote() {
   const form = document.getElementById('quote-form');
@@ -61,7 +95,7 @@ function initFormQuote() {
 
   if (!form) return;
 
-  // Máscara com DDD 46
+  // Máscara com DDD
   phoneInput.addEventListener('input', (e) => {
     let val = e.target.value.replace(/\D/g, '');
     if (val.length > 11) val = val.slice(0, 11);
@@ -80,7 +114,7 @@ function initFormQuote() {
   // Limpa mensagens de erro ao digitar
   form.querySelectorAll('input, select, textarea').forEach(input => {
     input.addEventListener('input', () => {
-      input.classList.remove('input-error');
+      input.classList.remove('field-error');
       const err = document.getElementById(`${input.name}-error`);
       if (err) err.textContent = '';
     });
@@ -93,21 +127,27 @@ function initFormQuote() {
     const name = form['name'];
     const phone = form['phone'];
     const service = form['service'];
+    const city = form['city'];
     const details = form['details'];
 
     if (!name.value.trim() || name.value.trim().length < 3) {
-      showError(name, 'name-error', 'Por favor, informe seu nome ou empresa.');
+      showError(name, 'name-error', 'Informe o seu nome ou da empresa.');
       isValid = false;
     }
 
     const cleanPhone = phone.value.replace(/\D/g, '');
     if (cleanPhone.length < 10) {
-      showError(phone, 'phone-error', 'Informe um telefone com DDD válido.');
+      showError(phone, 'phone-error', 'Informe um telefone/WhatsApp com DDD.');
       isValid = false;
     }
 
     if (!service.value) {
-      showError(service, 'service-error', 'Selecione uma categoria de serviço.');
+      showError(service, 'service-error', 'Selecione o tipo de serviço.');
+      isValid = false;
+    }
+
+    if (!city.value.trim()) {
+      showError(city, 'city-error', 'Informe sua cidade / localização.');
       isValid = false;
     }
 
@@ -121,15 +161,17 @@ function initFormQuote() {
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>Encaminhando para Oficina...</span>`;
+      submitBtn.innerHTML = `<span>Formatando dados para a Oficina...</span>`;
 
       // Mensagem organizada para o WhatsApp real da J Eletro
       const message = encodeURIComponent(
-        `*SOLICITAÇÃO DE ORÇAMENTO - J ELETRO MOTORES*\n\n` +
+        `*SOLICITAÇÃO DE ORÇAMENTO - J ELETRO MOTORES*\n` +
+        `_(Empresa fundada em 15/05/2012 - Palmas/PR)_\n\n` +
         `*Cliente/Empresa:* ${name.value.trim()}\n` +
         `*Telefone:* ${phone.value.trim()}\n` +
-        `*Tipo de Serviço:* ${service.value}\n` +
-        `*Detalhes do Motor:* ${details.value.trim()}\n\n` +
+        `*Cidade:* ${city.value.trim()}\n` +
+        `*Serviço:* ${service.value}\n` +
+        `*Dados do Motor:* ${details.value.trim()}\n\n` +
         `_Enviado pelo site jeletromotores.com.br_`
       );
 
@@ -142,27 +184,27 @@ function initFormQuote() {
         form.reset();
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-      }, 700);
+      }, 600);
     }
   });
 
   function showError(input, errorId, msg) {
-    input.classList.add('input-error');
+    input.classList.add('field-error');
     const errContainer = document.getElementById(errorId);
     if (errContainer) errContainer.textContent = msg;
   }
 }
 
 /**
- * 4. Ano Atual
+ * 5. Ano Atual no Rodapé
  */
 function initYear() {
-  const yearEl = document.getElementById('current-year');
+  const yearEl = document.getElementById('year-copy');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
 /**
- * 5. ScrollSpy para Menu Ativo
+ * 6. ScrollSpy para Menu Ativo
  */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');

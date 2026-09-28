@@ -1,0 +1,332 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Eletro Motores | Rebobinagem e Manutenção Industrial</title>
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-accent">J</span> ELETRO <span class="logo-sub">MOTORES</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contato" class="btn btn-primary btn-header">Orçamento Rápido</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">Engenharia e Precisão Técnica</div>
+                    <h1 class="hero-title">Rebobinagem de Alta Precisão & Performance Industrial</h1>
+                    <p class="hero-subtitle">Maximizando a eficiência e a vida útil de motores elétricos industriais através de tecnologia avançada, rigidez técnica e acabamento impecável.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                            <i data-lucide="message-square"></i> Falar no WhatsApp
+                        </a>
+                        <a href="#servicos" class="btn btn-outline btn-lg">Conhecer Serviços</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#servicos"><i data-lucide="chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="stats">
+            <div class="container stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">+15</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">+5.000</span>
+                    <span class="stat-label">Motores Rebobinados</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Índice de Confiabilidade</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Suporte Emergencial</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="servicos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Soluções Especializadas</span>
+                    <h2 class="section-title">Nossa Expertise em Serviços</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="service-title">Rebobinagem de Motores</h3>
+                        <p class="service-description">Rebobinagem completa de motores de baixa e alta tensão, com isolamento classe H/H+ e testes dielétricos rigorosos para otimização de rendimento.</p>
+                        <a href="#contato" class="service-link">Solicitar Serviço <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="service-title">Manutenção Preventiva</h3>
+                        <p class="service-description">Análise de vibração, alinhamento a laser, termografia e balanceamento dinâmico para antecipar falhas e eliminar paradas fabris não programadas.</p>
+                        <a href="#contato" class="service-link">Solicitar Serviço <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3 class="service-title">Instalação Industrial</h3>
+                        <p class="service-description">Montagem de quadros de comando, parametrização de inversores de frequência, soft-starters e adequação de infraestrutura elétrica industrial.</p>
+                        <a href="#contato" class="service-link">Solicitar Serviço <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3 class="service-title">Consultoria Técnica</h3>
+                        <p class="service-description">Análise de eficiência energética e diagnóstico térmico de equipamentos rotativos para elevar o payback operacional da sua empresa.</p>
+                        <a href="#contato" class="service-link">Solicitar Serviço <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about section" id="sobre">
+            <div class="container about-container">
+                <div class="about-image-wrapper">
+                    <div class="about-image-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1000" alt="Instalações J Eletro Motores" class="about-image">
+                    <div class="about-experience-badge">
+                        <span class="badge-years">ISO 9001</span>
+                        <span class="badge-text">Padrão de Qualidade Certificado</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-subtitle">Sobre a J Eletro Motores</span>
+                    <h2 class="section-title">Engenharia de precisão com estética e padrão industrial.</h2>
+                    <p class="about-text">
+                        A <strong>J Eletro Motores</strong> foi fundada com um propósito claro: elevar os padrões da manutenção eletromecânica no setor industrial. Unindo a engenharia tradicional a processos avançados de diagnose, oferecemos soluções robustas que garantem o funcionamento ininterrupto da sua planta.
+                    </p>
+                    <p class="about-text">
+                        Nossos laboratórios técnicos utilizam insumos de ponta, isolamentos de última geração e bancadas de testes de alta capacidade. Mais do que reparar motores, asseguramos confiabilidade operacional, segurança e máxima rentabilidade para seus ativos.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i data-lucide="check-circle-2"></i>
+                            <span>Norma Técnica Rigorosa</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle-2"></i>
+                            <span>Bancada de Testes Própria</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle-2"></i>
+                            <span>Equipe de Engenharia Especializada</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle-2"></i>
+                            <span>Garantia Estendida de Operação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Entre em Contato</span>
+                    <h2 class="section-title">Solicite seu Orçamento Técnico</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Atendimento Direto</h3>
+                        <p class="contact-info-desc">Entre em contato via formulário, e-mail ou WhatsApp para uma avaliação da sua demanda industrial.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                                <div>
+                                    <h4>Endereço</h4>
+                                    <p>Distrito Industrial, Av. Engenheiros, 1000</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <h4>Telefone / WhatsApp</h4>
+                                    <p>(00) 99999-9999 / (00) 3333-3333</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <h4>E-mail</h4>
+                                    <p>contato@jeletromotores.com.br</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="clock"></i></div>
+                                <div>
+                                    <h4>Horário de Funcionamento</h4>
+                                    <p>Segunda a Sexta: 07h30 às 18h00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nome Completo / Empresa</label>
+                            <input type="text" id="name" name="name" placeholder="Ex: João Silva ou Indústria X" required>
+                            <span class="error-msg" id="name-error">Por favor, informe seu nome.</span>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="email">E-mail Corporativo</label>
+                                <input type="email" id="email" name="email" placeholder="seuemail@empresa.com" required>
+                                <span class="error-msg" id="email-error">Informe um e-mail válido.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+                                <span class="error-msg" id="phone-error">Informe seu telefone.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="rebobinagem">Rebobinagem de Motores</option>
+                                <option value="preventiva">Manutenção Preventiva</option>
+                                <option value="instalacao">Instalação Industrial</option>
+                                <option value="consultoria">Consultoria Técnica</option>
+                                <option value="outros">Outros Serviços</option>
+                            </select>
+                            <span class="error-msg" id="service-error">Selecione um serviço.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Detalhes do Motor / Especificação</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Descreva a potência (CV/kW), RPM, tensão ou sintomas apresentados..." required></textarea>
+                            <span class="error-msg" id="message-error">Por favor, insira uma mensagem.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Enviar Solicitação</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="brand-logo">
+                    <span class="logo-accent">J</span> ELETRO <span class="logo-sub">MOTORES</span>
+                </a>
+                <p class="footer-desc">Referência em soluções eletromecânicas e manutenção de alta precisão para o setor industrial.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-title">Conecte-se</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 J Eletro Motores. Todos os direitos reservados.</p>
+                <p>Precisão em cada detalhe.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

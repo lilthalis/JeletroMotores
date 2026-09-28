@@ -1,137 +1,67 @@
-// script.js
+const header = document.querySelector('#header');
+const toggle = document.querySelector('#menu-toggle');
+const menu = document.querySelector('#main-menu');
+const navLinks = document.querySelectorAll('.nav-link');
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    /* ==========================================================================
-       1. MENU MOBILE (TOGGLE)
-       ========================================================================== */
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+function closeMenu() {
+  menu.classList.remove('open');
+  toggle.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}
 
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            
-            // Alterna ícone entre menu hamburguer e x
-            const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                icon.setAttribute('data-lucide', 'menu');
-            }
-            lucide.createIcons();
-        });
+toggle.addEventListener('click', () => {
+  const isOpen = menu.classList.toggle('open');
+  toggle.classList.toggle('open', isOpen);
+  toggle.setAttribute('aria-expanded', String(isOpen));
+});
 
-        // Fechar menu mobile ao clicar em um link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                if (icon) {
-                    icon.setAttribute('data-lucide', 'menu');
-                    lucide.createIcons();
-                }
-            });
-        });
-    }
+navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
-    /* ==========================================================================
-       2. SCROLL HEADER & ACTIVE LINK SELECTION
-       ========================================================================== */
-    const header = document.getElementById('header');
-    const sections = document.querySelectorAll('section[id]');
+const sections = [...document.querySelectorAll('main section[id]')];
+function updateNavigation() {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+  const current = sections.reduce((active, section) => (
+    window.scrollY >= section.offsetTop - 120 ? section : active
+  ), null);
+  if (!current) return;
+  navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${current.id}`));
+}
+window.addEventListener('scroll', updateNavigation, { passive: true });
+updateNavigation();
 
-    const scrollActive = () => {
-        const scrollY = window.pageYOffset;
+const form = document.querySelector('#contact-form');
+const status = document.querySelector('#form-status');
+const messages = {
+  name: 'Informe seu nome ou empresa.',
+  phone: 'Informe um telefone válido.',
+  service: 'Selecione o tipo de serviço.',
+  details: 'Inclua os dados básicos do motor.'
+};
 
-        // Sticky Header estilo Glassmorphism mais denso
-        if (scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+function validateField(field) {
+  const value = field.value.trim();
+  const valid = field.id === 'phone' ? value.replace(/\D/g, '').length >= 8 : value.length > 0;
+  const wrapper = field.closest('.field');
+  wrapper.classList.toggle('error', !valid);
+  wrapper.querySelector('small').textContent = valid ? '' : messages[field.id];
+  return valid;
+}
 
-        // Highlight Link Ativo
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100;
-            const sectionId = current.getAttribute('id');
-            const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const fields = [...form.querySelectorAll('[required]')];
+  const isValid = fields.every(validateField);
+  if (!isValid) {
+    status.classList.remove('show');
+    form.querySelector('.error input, .error select, .error textarea').focus();
+    return;
+  }
+  status.textContent = 'Solicitação recebida. Nossa equipe técnica retornará em breve.';
+  status.classList.add('show');
+  form.reset();
+});
 
-            if (navLink) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink.classList.add('active');
-                } else {
-                    navLink.classList.remove('active');
-                }
-            }
-        });
-    };
-
-    window.addEventListener('scroll', scrollActive);
-
-    /* ==========================================================================
-       3. VALIDAÇÃO SIMPLES DO FORMULÁRIO DE CONTATO
-       ========================================================================== */
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            let isValid = true;
-
-            // Elementos dos campos
-            const fields = [
-                { id: 'name', errorId: 'name-error', check: val => val.trim() !== '' },
-                { id: 'email', errorId: 'email-error', check: val => validateEmail(val) },
-                { id: 'phone', errorId: 'phone-error', check: val => val.trim().length >= 8 },
-                { id: 'service', errorId: 'service-error', check: val => val !== '' },
-                { id: 'message', errorId: 'message-error', check: val => val.trim() !== '' }
-            ];
-
-            fields.forEach(field => {
-                const input = document.getElementById(field.id);
-                const parent = input.parentElement;
-                
-                if (!field.check(input.value)) {
-                    parent.classList.add('error');
-                    isValid = false;
-                } else {
-                    parent.classList.remove('error');
-                }
-            });
-
-            if (isValid) {
-                // Simulação de Envio bem-sucedido
-                formStatus.className = 'form-status success';
-                formStatus.textContent = 'Solicitação enviada com sucesso! Nossa equipe técnica entrará em contato em breve.';
-                contactForm.reset();
-
-                // Limpa mensagem de status após 6 segundos
-                setTimeout(() => {
-                    formStatus.className = 'form-status';
-                    formStatus.textContent = '';
-                }, 6000);
-            }
-        });
-
-        // Auxiliar: Validação Regex de E-mail
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(String(email).toLowerCase());
-        }
-
-        // Limpa estado de erro ao digitar
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('input', () => {
-                if (input.parentElement.classList.contains('error')) {
-                    input.parentElement.classList.remove('error');
-                }
-            });
-        });
-    }
+form.querySelectorAll('[required]').forEach((field) => {
+  field.addEventListener('input', () => validateField(field));
+  field.addEventListener('change', () => validateField(field));
 });
